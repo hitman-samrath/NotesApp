@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/NotesApp/static/css/main.d03cc8be.css",
+    "main.js": "/NotesApp/static/js/main.019d703f.js",
+    "index.html": "/NotesApp/index.html",
+    "main.d03cc8be.css.map": "/NotesApp/static/css/main.d03cc8be.css.map",
+    "main.019d703f.js.map": "/NotesApp/static/js/main.019d703f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d03cc8be.css",
+    "static/js/main.019d703f.js"
+  ]
+}
