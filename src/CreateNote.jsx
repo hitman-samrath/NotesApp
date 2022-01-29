@@ -18,18 +18,23 @@ const CreateNote = () => {
   }
 
   const createNote = (e) => {
-    setStoreData((prevData) => {
-      return [...prevData, note];
-    });
-
     e.preventDefault();
     console.log(note);
-    setNote(() => {
-      return {
-        title: '',
-        content: ''
-      };
-    });
+
+    if (note.title !== '' && note.content !== '') {
+      setStoreData((prevData) => {
+        return [...prevData, note];
+      });
+      setNote(() => {
+        return {
+          title: '',
+          content: ''
+        };
+      });
+    }
+    else {
+      alert('Please fill in the fields');
+    }
   }
 
   const deleteNote = (id) => {
@@ -50,12 +55,12 @@ const CreateNote = () => {
         </form>
       </div>
       <div className='note-main'>{storeData.map((value, index) => {
-        return(
-        <Note id={index}
-          key={index}
-          title={value.title}
-          content={value.content} 
-          onSelect={deleteNote}/>);
+        return (
+          <Note id={index}
+            key={index}
+            title={value.title}
+            content={value.content}
+            onSelect={deleteNote} />);
       })}
       </div>
     </>
