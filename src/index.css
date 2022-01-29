@@ -1,0 +1,204 @@
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+ }
+ 
+ .header {
+     position: relative;
+     width: 100%;
+     top: 0;
+     color: #fff;
+     background-color: #ffbb00;
+     margin-bottom: 10px;
+     padding: 10px 0 10px 10%;
+ }
+ 
+ .note-main {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     flex-wrap: wrap;
+ }
+ 
+ .create-note-container,
+ .note-container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     background-color: #fff;
+     border-radius: 5px;
+ }
+ 
+ .create-note-container {
+     width: 300px;
+     box-shadow: rgb(185, 184, 184) 1px 1px 15px;
+     margin: 30px auto 5%;
+ }
+ 
+ .input-form {
+     display: inline;
+ }
+ 
+ .cn-titlebox,
+ .cn-textbox,
+ .n-titlebox,
+ .n-textbox {
+     font-family: cursive;
+     border: none;
+     outline: none;
+     padding: 4px 0;
+ }
+ 
+ .cn-titlebox {
+     width: 270px;
+ }
+ 
+ .cn-textbox {
+     width: 240px;
+ }
+ 
+ .n-titlebox {
+     width: 220px;
+     text-transform: capitalize;
+ }
+ 
+ .n-textbox {
+     width: 190px;
+ }
+ 
+ .cn-titlebox,
+ .n-titlebox {
+     margin-top: 10px;
+     font-size: 17px;
+     display: flex;
+     font-weight: 600;
+ }
+ 
+ .cn-textbox,
+ .n-textbox {
+     font-size: 15px;
+     resize: none;
+     height: 10em;
+     margin-bottom: 10px;
+ }
+ 
+ .cn-textbox::-webkit-scrollbar,
+ .n-textbox::-webkit-scrollbar,
+ .cn-titlebox::-webkit-scrollbar,
+ .n-titlebox::-webkit-scrollbar {
+     overflow-x: hidden;
+     overflow-y: scroll;
+     display: none;
+ }
+ 
+ .cn-btn {
+     color: #ffbb00;
+     display: inline;
+     font-size: 30px;
+     background-color: #fff;
+     border: none;
+     box-shadow: #000 1px 1px 8px -4px;
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     cursor: pointer;
+     margin-left: 2px;
+     margin-bottom: 5px;
+ }
+ 
+ .cn-btn:hover {
+     transition: ease 0.2s;
+     color: #fff;
+     background-color: #ffbb00;
+ }
+ 
+ .note-container {
+     width: 250px;
+     box-shadow: #000 1px 1px 5px -2px;
+     margin: 10px 30px 20px;
+ }
+ 
+ footer {
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+     font-family: cursive;
+     font-weight: 600;
+     text-align: center;
+     background-color: #000;
+ }
+ 
+ #insta,
+ #linkedin,
+ #github {
+     font-size: 30px;
+     color: #fff;
+     padding: 10px 20px;
+     padding-bottom: 5px;
+ }
+ 
+ #insta:hover,
+ #linkedin:hover,
+ #github:hover {
+     transition: all 0.3s ease;
+     cursor: pointer;
+ }
+ 
+ #insta:hover {
+     color: #e1306c;
+ }
+ 
+ #linkedin:hover {
+     color: #1e4fd6;
+ }
+ 
+ #github:hover {
+     color: rgb(8, 109, 21);
+ }
+ 
+ .last {
+     font-size: 20px;
+     color: #fff;
+     padding-bottom: 10px;
+ }
+ 
+ .lastname {
+     color: #ffbb00;
+ }
+ 
+ @media(max-width: 500px) {
+     .header {
+         padding: 10px 0;
+         display: flex;
+         justify-content: center;
+     }
+ }
+ 
+ @media(max-width: 350px) {
+     .header {
+         font-size: 14px;
+     }
+     .last {
+         font-size: 16px;
+     }
+     .create-note-container {
+         width: 270px;
+     }
+     .note-container {
+         width: 220px;
+     }
+     .cn-titlebox {
+         width: 240px;
+     }
+     .cn-textbox {
+         width: 210px;
+     }
+     .n-titlebox {
+         width: 190px;
+     }
+     .n-textbox {
+         width: 160px;
+     }
+ }
