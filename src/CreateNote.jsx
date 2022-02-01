@@ -3,6 +3,8 @@ import Note from './Note';
 
 const CreateNote = () => {
 
+  const [hide, setHide] = useState(false);
+
   const [note, setNote] = useState({
     title: '',
     content: ''
@@ -45,13 +47,42 @@ const CreateNote = () => {
     });
   }
 
+  const showHide = () => {
+    setHide(true);
+  }
+  const hideHide = () => {
+    setHide(false);
+  }
+
   return (
     <>
-      <div className='create-note-container'>
+      <div className='create-note-container' onDoubleClick={hideHide}>
         <form className='input-form'>
-          <input className="cn-titlebox" type="text" name='title' value={note.title} onChange={addNote} placeholder="Add Title" />
-          <textarea className="cn-textbox" name='content' value={note.content} onChange={addNote} placeholder="Add a note..."></textarea>
-          <button className='cn-btn' onClick={createNote}>+</button>
+
+
+          {hide?
+            <input className="cn-titlebox"
+            type="text"
+            name='title'
+            value={note.title}
+            onChange={addNote}
+            placeholder="Add Title" /> 
+            : 
+            <input className="cn-titlebox2"
+            placeholder="Add a note"
+            onClick={showHide}/>}
+
+          {hide ?
+            <textarea className="cn-textbox"
+              name='content'
+              value={note.content}
+              onChange={addNote}
+              placeholder="Add a note..."
+            ></textarea> : null}
+
+          {hide ?
+            <button className='cn-btn' 
+            onClick={createNote}>+</button> : null}
         </form>
       </div>
       <div className='note-main'>{storeData.map((value, index) => {

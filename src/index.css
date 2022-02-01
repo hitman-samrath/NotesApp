@@ -44,6 +44,7 @@
  
  .cn-titlebox,
  .cn-textbox,
+ .cn-titlebox2,
  .n-titlebox,
  .n-textbox {
      font-family: cursive;
@@ -52,7 +53,12 @@
      padding: 4px 0;
  }
  
- .cn-titlebox {
+ .cn-titlebox2 {
+     padding: 4px 0 18px;
+ }
+ 
+ .cn-titlebox,
+ .cn-titlebox2 {
      width: 270px;
  }
  
@@ -70,7 +76,8 @@
  }
  
  .cn-titlebox,
- .n-titlebox {
+ .n-titlebox,
+ .cn-titlebox2 {
      margin-top: 10px;
      font-size: 17px;
      display: flex;
